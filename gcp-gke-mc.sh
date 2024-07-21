@@ -45,10 +45,10 @@ while [[ "${PLATFORM^^}" != "AWS" ]] && [[ "${PLATFORM^^}" != "AZURE" ]] && [[ "
     read PLATFORM
 done
 
-mkdir -p $HOME/mc-k8s-cluster/${PLATFORM^^} > /dev/null 2>&1
-export PROJDIR=$HOME/mc-k8s-cluster/${PLATFORM^^}
-export ENVDIR=$HOME/mc-k8s-cluster
-export SCRIPTNAME=mc-k8s-cluster.sh
+mkdir -p $HOME/gcp-gke-mc/${PLATFORM^^} > /dev/null 2>&1
+export PROJDIR=$HOME/gcp-gke-mc/${PLATFORM^^}
+export ENVDIR=$HOME/gcp-gke-mc
+export SCRIPTNAME=gcp-gke-mc.sh
 export AWS_CLUSTER=aws-eks-cluster
 export AZURE_CLUSTER=azure-aks-cluster
 export GCP_CLUSTER=gcp-gke-cluster
@@ -398,8 +398,8 @@ elif [[ "${PLATFORM^^}" == "GCP" ]] ; then
         echo "*** gcloud SDK has not been installed ***"
     fi
 fi
-mkdir -p $HOME/mc-k8s-cluster/${PLATFORM^^} > /dev/null 2>&1
-export PROJDIR=$HOME/mc-k8s-cluster/${PLATFORM^^}
+mkdir -p $HOME/gcp-gke-mc/${PLATFORM^^} > /dev/null 2>&1
+export PROJDIR=$HOME/gcp-gke-mc/${PLATFORM^^}
 end=`date +%s`
 echo
 echo Execution time was `expr $end - $start` seconds.
