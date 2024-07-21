@@ -129,7 +129,7 @@ cat<<EOF
 Configure Kubernetes on AWS, Azure and GCP
 -----------------------------------------------
 Please enter number to select your choice:
- (0) Switch between Preview, Execute and Delete modes
+ (0) Switch between Preview, Create and Delete modes
  (1) Set cloud platform
  (2) Download SDK
  (3) Authenticate
