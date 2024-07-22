@@ -946,7 +946,7 @@ if [ $MODE -eq 1 ]; then
             echo
             echo "$ gcloud beta container fleet memberships generate-gateway-rbac --membership=\$AWS_CLUSTER --role=clusterrole/cluster-admin --users=\$EMAIL --project=\$GCP_PROJECT --context \$(kubectl config current-context) --kubeconfig \$HOME/.kube/config --apply # to enable clusters to authorize requests from Google Cloud console" | pv -qL 100
             echo
-            echo "$ gcloud beta container fleet memberships generate-gateway-rbac --membership=\$AWS_CLUSTER --role=clusterrole/cluster-admin --users=\$CLOUDBUILD_SA --project=\$GCP_PROJECT --context \$(kubectl config current-context) --kubeconfig \$HOME/.kube/config --apply # to enable clusters to authorize requests from cloud build" | pv -qL 100    echo
+            echo "$ gcloud beta container fleet memberships generate-gateway-rbac --membership=\$AWS_CLUSTER --role=clusterrole/cluster-admin --users=\$CLOUDBUILD_SA --project=\$GCP_PROJECT --context \$(kubectl config current-context) --kubeconfig \$HOME/.kube/config --apply # to enable clusters to authorize requests from cloud build" | pv -qL 100    
         ;;
         AZURE)
             echo
@@ -962,7 +962,7 @@ if [ $MODE -eq 1 ]; then
             echo
             echo "$ gcloud beta container fleet memberships generate-gateway-rbac --membership=\$AZURE_CLUSTER --role=clusterrole/cluster-admin --users=\$EMAIL --project=\$GCP_PROJECT --context \$(kubectl config current-context) --kubeconfig \$HOME/.kube/config --apply # to enable clusters to authorize requests from Google Cloud console" | pv -qL 100
             echo
-            echo "$ gcloud beta container fleet memberships generate-gateway-rbac --membership=\$AZURE_CLUSTER --role=clusterrole/cluster-admin --users=\$CLOUDBUILD_SA --project=\$GCP_PROJECT --context \$(kubectl config current-context) --kubeconfig \$HOME/.kube/config --apply # to enable clusters to authorize requests from cloud build" | pv -qL 100    echo
+            echo "$ gcloud beta container fleet memberships generate-gateway-rbac --membership=\$AZURE_CLUSTER --role=clusterrole/cluster-admin --users=\$CLOUDBUILD_SA --project=\$GCP_PROJECT --context \$(kubectl config current-context) --kubeconfig \$HOME/.kube/config --apply # to enable clusters to authorize requests from cloud build" | pv -qL 100    
         ;;
         GCP)
             echo
@@ -978,7 +978,7 @@ if [ $MODE -eq 1 ]; then
             echo
             echo "$ gcloud beta container fleet memberships generate-gateway-rbac --membership=\$GCP_CLUSTER --role=clusterrole/cluster-admin --users=\$EMAIL --project=\$GCP_PROJECT --context \$(kubectl config current-context) --kubeconfig \$HOME/.kube/config --apply # to enable clusters to authorize requests from Google Cloud console" | pv -qL 100
             echo
-            echo "$ gcloud beta container fleet memberships generate-gateway-rbac --membership=\$GCP_CLUSTER --role=clusterrole/cluster-admin --users=\$CLOUDBUILD_SA --project=\$GCP_PROJECT --context \$(kubectl config current-context) --kubeconfig \$HOME/.kube/config --apply # to enable clusters to authorize requests from cloud build" | pv -qL 100    echo
+            echo "$ gcloud beta container fleet memberships generate-gateway-rbac --membership=\$GCP_CLUSTER --role=clusterrole/cluster-admin --users=\$CLOUDBUILD_SA --project=\$GCP_PROJECT --context \$(kubectl config current-context) --kubeconfig \$HOME/.kube/config --apply # to enable clusters to authorize requests from cloud build" | pv -qL 100
         ;;
     esac
 elif [ $MODE -eq 2 ]; then
