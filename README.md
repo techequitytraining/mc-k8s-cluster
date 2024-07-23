@@ -2,7 +2,7 @@
 
 ## 🌐 Automate and Manage Kubernetes Across GCP, Azure, and AWS
 
-Welcome to the cutting-edge demo script that showcases the power of Google Kubernetes Engine (GKE) Enterprise in managing multi-cloud Kubernetes environments. This fully automated script provisions and attaches Kubernetes clusters from Google Cloud Platform (GCP), Microsoft Azure, and Amazon Web Services (AWS), demonstrating GKE's ability to centrally manage any Cloud Native Computing Foundation (CNCF) compliant cluster.
+Welcome to this demo script that showcases the power of Google Kubernetes Engine (GKE) Enterprise in managing multi-cloud Kubernetes environments. This fully automated script provisions and attaches Kubernetes clusters from Google Cloud Platform (GCP), Microsoft Azure, and Amazon Web Services (AWS), demonstrating GKE's ability to centrally manage any Cloud Native Computing Foundation (CNCF) compliant cluster.
 
 ### 🚀 What This Demo Offers
 
