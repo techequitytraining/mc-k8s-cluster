@@ -1,4 +1,4 @@
-# Multi-Cloud Kubernetes Management with GKE Enterprise
+# Multi-Cloud Kubernetes Management with GKE Enterprise Demo Script
 
 ## 🌐 Automate and Manage Kubernetes Across GCP, Azure, and AWS
 
