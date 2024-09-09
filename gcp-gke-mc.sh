@@ -111,7 +111,7 @@ export AWS_REGION=us-west-2
 export AWS_NODE_TYPE=t3.medium
 export AZURE_LOCATION=westus # westeurope
 export AZURE_NODE_TYPE=Standard_D3_v2 # Standard_DS2_v2
-export SERVICEMESH_VERSION=1.20.6-asm.0
+export SERVICEMESH_VERSION=1.22.4-asm.0
 export APPLICATION_NAME=hello-app
 EOF
 source $ENVDIR/.env
