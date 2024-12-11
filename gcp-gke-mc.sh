@@ -1184,9 +1184,9 @@ elif [ $MODE -eq 3 ]; then
             echo
             echo "$ $PROJDIR/kubectx eks=. # to switch context" | pv -qL 100
             $PROJDIR/kubectx eks=.
-            echo
-            echo "$ gcloud container hub memberships unregister $AWS_CLUSTER --context=eks # to unregister cluster" | pv -qL 100
-            gcloud container hub memberships unregister $AWS_CLUSTER --context=eks
+            # echo
+            # echo "$ gcloud container hub memberships unregister $AWS_CLUSTER --context=eks # to unregister cluster" | pv -qL 100
+            # gcloud container hub memberships unregister $AWS_CLUSTER --context=eks
             echo
             echo "$ gcloud container attached clusters delete $AWS_CLUSTER --location=$GCP_REGION --ignore-errors --allow-missing # to unregister cluster" | pv -qL 100
             gcloud container attached clusters delete $AWS_CLUSTER --location=$GCP_REGION --ignore-errors --allow-missing  
@@ -1198,9 +1198,9 @@ elif [ $MODE -eq 3 ]; then
             echo
             echo "$ $PROJDIR/kubectx aks=. # to switch context" | pv -qL 100
             $PROJDIR/kubectx aks=.
-            echo
-            echo "$ gcloud container hub memberships unregister $AZURE_CLUSTER --context=aks # to register cluster" | pv -qL 100
-            gcloud container hub memberships unregister $AZURE_CLUSTER --context=aks
+            # echo
+            # echo "$ gcloud container hub memberships unregister $AZURE_CLUSTER --context=aks # to register cluster" | pv -qL 100
+            # gcloud container hub memberships unregister $AZURE_CLUSTER --context=aks
             echo
             echo "$ gcloud container attached clusters delete $AZURE_CLUSTER --location=$GCP_REGION --ignore-errors --allow-missing # to delete cluster" | pv -qL 100
             gcloud container attached clusters delete $AZURE_CLUSTER --location=$GCP_REGION --ignore-errors --allow-missing
@@ -1410,8 +1410,8 @@ case ${PLATFORM^^} in
             echo "$ kubectl apply -f \$PROJDIR/attached-logging-monitoring/monitoring/server-configmap.yaml # to apply yaml" | pv -qL 100
             echo
             echo "$ kubectl apply -f \$PROJDIR/attached-logging-monitoring/monitoring/sidecar-configmap.yaml # to apply yaml" | pv -qL 100
-            echo
-            echo "$ gcloud container hub memberships unregister \$AZURE_CLUSTER --context=aks # to register cluster" | pv -qL 100
+            # echo
+            # echo "$ gcloud container hub memberships unregister \$AZURE_CLUSTER --context=aks # to register cluster" | pv -qL 100
         elif [ $MODE -eq 2 ]; then
             export STEP="${STEP},7"
             echo
@@ -1761,9 +1761,9 @@ elif [ $MODE -eq 3 ]; then
     echo
     echo "$ kubectl delete namespace istio-system # to delete a namespace called istio-system" | pv -qL 100
     kubectl delete namespace istio-system --ignore-not-found=true 
-    echo
-    echo "$ kubectl delete secret cacerts -n istio-system # to delete secret cacerts" | pv -qL 100
-    kubectl delete secret cacerts -n istio-system
+    # echo
+    # echo "$ kubectl delete secret cacerts -n istio-system # to delete secret cacerts" | pv -qL 100
+    # kubectl delete secret cacerts -n istio-system
     echo
     echo "$ $ENVDIR/istio-${SERVICEMESH_VERSION}/bin/istioctl uninstall --purge -y # to uninstall istio" | pv -qL 100
     $ENVDIR/istio-${SERVICEMESH_VERSION}/bin/istioctl uninstall --purge -y
