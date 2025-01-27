@@ -1020,9 +1020,6 @@ elif [ $MODE -eq 2 ]; then
     echo "$ export EMAIL=\$(gcloud config get-value core/account) # to set email"| pv -qL 100
     export EMAIL=$(gcloud config get-value core/account)
     echo
-    echo "$ gcloud projects add-iam-policy-binding $GCP_PROJECT --member=\"serviceAccount:$GCP_PROJECT.svc.id.goog[gke-system/gke-telemetry-agent]\" --role=roles/gkemulticloud.telemetryWriter --no-user-output-enabled # to enable system container logging and container metrics" | pv -qL 100
-    gcloud projects add-iam-policy-binding $GCP_PROJECT --member="serviceAccount:$GCP_PROJECT.svc.id.goog[gke-system/gke-telemetry-agent]" --role=roles/gkemulticloud.telemetryWriter --no-user-output-enabled
-    echo
     echo "$ gcloud projects add-iam-policy-binding $GCP_PROJECT --member=\"serviceAccount:$CLOUDBUILD_SA\" --role=\"roles/gkehub.gatewayAdmin\" --no-user-output-enabled # to enable user to access the Connect gateway API" | pv -qL 100
     gcloud projects add-iam-policy-binding $GCP_PROJECT --member="serviceAccount:$CLOUDBUILD_SA" --role="roles/gkehub.gatewayAdmin" --no-user-output-enabled
     echo
@@ -1217,6 +1214,9 @@ elif [ $MODE -eq 3 ]; then
             gcloud container fleet memberships unregister $GCP_CLUSTER --gke-cluster=$GCP_ZONE/$GCP_CLUSTER
         ;;
     esac
+    echo
+    echo "$ gcloud projects add-iam-policy-binding $GCP_PROJECT --member=\"serviceAccount:$GCP_PROJECT.svc.id.goog[gke-system/gke-telemetry-agent]\" --role=roles/gkemulticloud.telemetryWriter --no-user-output-enabled # to enable system container logging and container metrics" | pv -qL 100
+    gcloud projects add-iam-policy-binding $GCP_PROJECT --member="serviceAccount:$GCP_PROJECT.svc.id.goog[gke-system/gke-telemetry-agent]" --role=roles/gkemulticloud.telemetryWriter --no-user-output-enabled
 else
     export STEP="${STEP},6i"
     echo
